@@ -1,0 +1,133 @@
+header {
+    height: 9.54rem;
+    background: url(index-bg1-1.png) no-repeat center 0;
+    background-size: 100%;
+}
+
+.logo {
+    height: 0.76rem;
+    padding-top: 1.82rem;
+    background: url(logo-1.png) no-repeat center 1.82rem;
+    background-size: auto 0.76rem
+}
+
+.header-title {
+    padding-top: 0.32rem;
+    line-height: 0.84rem;
+    font-size: 0.54rem;
+    color: #fff;
+    text-align: center
+}
+
+.header-desc {
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.5rem;
+}
+
+.downloads {
+    padding-top: 0.45rem;
+}
+
+.downloads a {
+    display: block;
+    width: 4.23rem;
+    height: 0.88rem;
+    background-color: #fff;
+    line-height: 0.88rem;
+    text-align: center;
+    color: #426cbc;
+    font-size: 0.36rem;
+    margin: 0 auto;
+    border-radius: 0.44rem;
+    text-decoration: none;
+}
+
+.downloads a:active {
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+
+
+.f-item {
+    padding-top: 1rem;
+}
+
+.r-icon {
+    width: 1.6rem;
+    margin-left: 0.5rem;
+    height: 1.62rem;
+    float: left
+}
+
+
+
+.f-desc {
+    overflow: hidden;
+    height: 1.62rem;
+    padding-left: 0.4rem;
+}
+
+.f-d-title {
+    line-height: 0.72rem;
+    font-size: 0.36rem;
+    color: #333;
+}
+
+.f-d-desc {
+    color: #666;
+    font-size: 0.28rem;
+    line-height: 0.42rem;
+    padding-right: 0.30rem;
+}
+
+.modules {
+    padding-top: 0.92rem;
+}
+
+
+
+.fetures {
+    padding: 1.28rem 0.45rem 0 0.45rem;
+}
+
+.fe-item {
+    width: 3.3rem;
+    float: left;
+    height: 2.58rem;
+}
+
+
+.fe-title {
+    font-size: 0.28rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.46rem;
+    margin-bottom: 0.08rem;
+}
+
+.fe-desc {
+    font-size: 0.24rem;
+    color: #666;
+    padding: 0 0.56rem;
+    line-height: 0.30rem;
+}
+
+
+
+#index-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden
+}

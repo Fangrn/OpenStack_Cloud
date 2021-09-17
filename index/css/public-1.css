@@ -1,0 +1,572 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /* -moz-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent; */
+    font-family: Arial, "微软雅黑";
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+html,
+body {
+    background-color: #f5f5f5;
+}
+
+html.hide,
+body.hide {
+    height: 100%;
+    overflow: hidden
+}
+
+.common-header {
+    height: 1.2rem;
+    background-color: rgba(250, 250, 250, 1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+}
+
+.common-header.scrolled {
+    display: block;
+    /* border-bottom: 1px solid #dbdbdb; */
+}
+
+.logo-white {
+    width: 1.6rem;
+    height: 0.64rem;
+    background: url(logo-white.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/logo-white.png*/ no-repeat 0 0;
+    background-size: 1.53rem 0.64rem;
+    margin-left: 0.5rem;
+    margin-top: 0.28rem;
+}
+
+.menu-logo {
+    background: url(m-logo.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/m-logo.png*/ no-repeat 0 center;
+    background-size: auto 1.08rem;
+    width: 2.56rem;
+    height: 1.08rem;
+    margin-top: 1.44rem;
+    margin-left: 2.34rem;
+    opacity: 0;
+    transform: translateY(-0.3rem);
+}
+
+.open .menu-logo {
+    -webkit-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.close .menu-logo {
+    -webkit-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.menubg {
+    transform: translateY(0.8rem);
+    position: absolute;
+    width: 100%;
+    height: 3.8rem;
+    bottom: 0;
+    z-index: 1;
+}
+
+.left-bg {
+    background: url(left-bg.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/left-bg.png*/ no-repeat left bottom;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    right: 0;
+    width: 100%;
+    height: 3.8rem;
+    background-size: auto 3.8rem;
+    transform: translateX(-50px);
+    transition: transform 270ms;
+    transition-delay: 230ms;
+}
+
+.right-bg {
+    background: url(right-bg.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/right-bg.png*/ no-repeat right bottom;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    height: 3.8rem;
+    background-size: auto 3.06rem;
+    transform: translate3d(50px, 20px, 0);
+    transition: transform 270ms;
+    transition-delay: 230ms;
+}
+
+.open .left-bg {
+    transform: translateX(0px)
+}
+
+.open .right-bg {
+    transform: translate3d(0px, 0px, 0px)
+}
+
+.menu-func {
+    position: absolute;
+    top: 2.54rem;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.fun-item-wrap {
+    padding-top: 0.82rem;
+}
+
+.fun-item {
+    width: 4.2rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.35rem auto 0;
+    overflow: hidden
+}
+
+.fun-item a {
+    color: #444;
+    font-size: 0.44rem;
+    line-height: 1rem;
+    display: block;
+    height: 1rem;
+    padding-left: 1.72rem;
+    width: 2.48rem;
+    text-decoration: none;
+    outline: none
+}
+
+.open .icon4 {
+    transform: translateY(-0.3rem);
+    opacity: 0;
+    -webkit-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 190ms;
+    -moz-animation-delay: 190ms;
+    -o-animation-delay: 190ms;
+    animation-delay: 190ms
+}
+
+.open .icon3 {
+    transform: translateY(-0.3rem);
+    opacity: 0;
+    -webkit-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 160ms;
+    -moz-animation-delay: 160ms;
+    -o-animation-delay: 160ms;
+    animation-delay: 160ms
+}
+
+.open .icon2 {
+    transform: translateY(-0.3rem);
+    opacity: 0;
+    -webkit-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 130ms;
+    -moz-animation-delay: 130ms;
+    -o-animation-delay: 130ms;
+    animation-delay: 130ms
+}
+
+.open .icon1 {
+    -webkit-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconani 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 100ms;
+    -moz-animation-delay: 100ms;
+    -o-animation-delay: 100ms;
+    animation-delay: 100ms
+}
+
+.close .icon4 {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.close .icon3 {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 35ms;
+    -moz-animation-delay: 35ms;
+    -o-animation-delay: 35ms;
+    animation-delay: 35ms
+}
+
+.close .icon2 {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 70ms;
+    -moz-animation-delay: 70ms;
+    -o-animation-delay: 70ms;
+    animation-delay: 70ms
+}
+
+.close .icon1 {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -moz-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -o-animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    animation: iconaniret 270ms cubic-bezier(0.8, 0, 0.2, 1);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 105ms;
+    -moz-animation-delay: 105ms;
+    -o-animation-delay: 105ms;
+    animation-delay: 105ms
+}
+
+@-webkit-keyframes iconani {
+    0% {
+        transform: translateY(-0.3rem);
+        opacity: 0;
+    }
+    37% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes iconani {
+    0% {
+        transform: translateY(-0.3rem);
+        opacity: 0;
+    }
+    37% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes iconaniret {
+    0% {
+        transform: translateY(0);
+        opacity: 1
+    }
+    37% {
+        opacity: 1
+    }
+    100% {
+        transform: translateY(-0.3rem);
+        opacity: 0
+    }
+}
+
+@keyframes iconaniret {
+    0% {
+        transform: translateY(0);
+        opacity: 1
+    }
+    37% {
+        opacity: 1
+    }
+    100% {
+        transform: translateY(-0.3rem);
+        opacity: 0
+    }
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+    opacity: 0;
+    transform: translateY(-0.3rem);
+}
+
+.icon1 a {
+    background: url(icon_index.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/icon_index.png*/ no-repeat 0.8rem center;
+    background-size: 0.56rem 0.56rem;
+}
+
+.icon2 a {
+    background: url(icon_1.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/icon_1.png*/ no-repeat 0.8rem center;
+    background-size: 0.56rem 0.56rem;
+}
+
+.icon3 a {
+    background: url(icon_2.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/icon_2.png*/ no-repeat 0.8rem center;
+    background-size: 0.56rem 0.56rem;
+}
+
+.icon4 a {
+    background: url(icon_3.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/icon_3.png*/ no-repeat 0.8rem center;
+    background-size: 0.56rem 0.56rem;
+}
+
+.fun-item a:active {
+    background-color: rgba(0, 0, 0, 0.04)
+}
+
+.open.menu-content {
+    /* animation: bgdown 230ms linear;
+    animation-fill-mode: forwards; */
+    transform: translateY(0)
+}
+
+.close.menu-content {
+    transform: translateY(-100%);
+    transition-delay: 200ms;
+}
+
+.menu-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    background-color: rgba(250, 250, 250, 1);
+    overflow: hidden;
+    transform: translateY(-100%);
+    /* -webkit-transition: transform 270ms linear 0;
+    -moz-transition: transform 270ms linear 0; */
+    transition: transform 270ms;
+    /* Chrome, Opera */
+    /* display: none */
+}
+
+@-webkit-keyframes bgdown {
+    0% {
+        transform: translateY(-100%)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes bgdown {
+    0% {
+        transform: translateY(-100%)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes bgup {
+    0% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(-100%)
+    }
+}
+
+@keyframes bgup {
+    0% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(-100%)
+    }
+}
+
+.menu {
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0.24rem;
+    right: 0.31rem;
+    background-color: #fafafa;
+    border-radius: 2px;
+    z-index: 10002;
+    background: url(menu_sprit.png)/*tpa=https://qd.myapp.com/myapp/qqteam/TIM_WEB/img/TIM_MOBILE/menu_sprit.png*/ no-repeat;
+    background-size: auto 40px;
+    background-position: 0 0;
+}
+
+.open.menu {
+    background-position: 0 0;
+    -webkit-animation: open_menu 250ms steps(8);
+    -moz-animation: open_menu 250ms steps(8);
+    -o-animation: open_menu 250ms steps(8);
+    animation: open_menu 250ms steps(8);
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.close.menu {
+    background-position: -320px 0;
+    -webkit-animation: close_menu 250ms steps(10);
+    -moz-animation: close_menu 250ms steps(10);
+    -o-animation: close_menu 250ms steps(10);
+    animation: close_menu 250ms steps(10);
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open_menu {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -320px 0;
+    }
+}
+
+@-webkit-keyframes open_menu {
+    100% {
+        background-position: -320px 0;
+    }
+}
+
+@keyframes close_menu {
+    0% {
+        background-position: -320px 0;
+    }
+    100% {
+        background-position: -720px 0;
+    }
+}
+
+@-webkit-keyframes close_menu {
+    0% {
+        background-position: -320px 0;
+    }
+    100% {
+        background-position: -720px 0;
+    }
+}
+
+
+/* @keyframes  */
+
+.footer {
+    height: 1.6rem;
+    background-color: #ebebeb;
+    border-top: 1px solid #dbdbdb;
+}
+
+.suggest {
+    padding-top: 0.46rem;
+    text-align: center;
+    font-size: 0.18rem;
+    color: #777;
+    line-height: 0.34rem;
+    height: 0.34rem;
+}
+
+.suggest a {
+    font-size: 0.18rem;
+    color: #777;
+    text-decoration: none;
+    padding-right: 0.3rem;
+    position: relative;
+}
+
+.suggest a:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 0.16rem;
+    background-color: #777;
+    top: 0.06rem;
+    right: 0.15rem;
+}
+
+.copyright {
+    line-height: 0.34rem;
+    font-size: 0.18rem;
+    color: #777;
+    text-align: center
+}
